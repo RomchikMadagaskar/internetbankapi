@@ -2,16 +2,17 @@ package ru.skillfaktorydemo.internetbankapi.model;
 
 import jakarta.persistence.*;
 import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 
 @Setter
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
+@Builder
 @Entity
 @Table(name = "balance")
 public class ClientsBalance {
@@ -23,12 +24,6 @@ public class ClientsBalance {
 
     @Column(name = "thebalance")
     private BigDecimal balance;
-
-
-
-
-
-
 
 }
 
